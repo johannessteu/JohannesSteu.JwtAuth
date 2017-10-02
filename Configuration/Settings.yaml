@@ -1,0 +1,14 @@
+
+JohannesSteu:
+  JwtAuth:
+    # secret that is shared on both sides to encode the payload
+    sharedSecret: 'aSharedSecretString'
+
+Neos:
+  Flow:
+    security:
+      enable: true
+      authentication:
+        providers:
+          JwtTokenProvider:
+            provider: JohannesSteu\JwtAuth\Security\Authentication\Provider\JwtTokenProvider
